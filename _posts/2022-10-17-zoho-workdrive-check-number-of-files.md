@@ -9,7 +9,7 @@ layout: post
 categories:
 - Zoho WorkDrive
 author: ''
-image: ''
+image: "/assets/images/workdrive-icon.png"
 
 ---
 
