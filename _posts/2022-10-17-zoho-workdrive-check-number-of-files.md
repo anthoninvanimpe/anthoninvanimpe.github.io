@@ -1,37 +1,47 @@
 ---
 title: Zoho Workdrive
-description: ZohoCreator function to check how many files are in a specific folder
+description: Zoho Deluge function to check how many files are in a specific Zoho WorkDrive
+  folder.
 tags:
 - Zoho Deluge
 - Zoho Workdrive
-layout: article
+layout: post
+categories:
+- Zoho WorkDrive
+author: ''
+image: ''
 
 ---
+### Our Zoho Deluge Function!
+
+Below is an example of an function to check the number of files insides a folder.
+
 ```javascript
-void Utilities.checkNumberOfFiles()
+
+int Utilities.checkNumberOfFiles(list folderIdsList)
 {
-	upcomingDeals = DEALS[STAGE == "Preparation" && DRIVE != null];
-	for each  rec in upcomingDeals
-	{
-		folderId = rec.DRIVE.getSuffix("https://workdrive.zoho.eu/folder/").getPrefix(" ").replaceAll("['\"]","");
+
+  for each  folderId in folderIdsList
+  {
     
-		header = Map();
-		header.put("Accept","application/vnd.api+json");
+	header = Map();
+	header.put("Accept","application/vnd.api+json");
     
-		folder = invokeurl
-		[
-			url :"https://www.zohoapis.eu/workdrive/api/v1/files/" + folderId
-			type :GET
-			headers:header
-			connection:"zoho_workdrive"
-		];
+	folder = invokeurl
+	[
+		url :"https://www.zohoapis.eu/workdrive/api/v1/files/" + folderId
+		type :GET
+		headers:header
+		connection:"zoho_workdrive"
+	];
     
-		filesNb = folder.get("data").get("attributes").get("storage_info").get("files_count");
-		if(filesNb > 0)
-		{
-			newUrl = rec.DRIVE.replaceAll(" - \( [0-9] file\(s\) \)","").replaceAll("</a>"," - ( " + filesNb + " file(s) )</a>");
-			rec.DRIVE=newUrl;
-		}
-	}
+	filesNb = folder.get("data").get("attributes").get("storage_info").get("files_count");
+		
+    return filesNb;
+  }
 }
 ```
+
+#### Additional Resources:
+
+[Zoho WorkDrive API](https://workdrive.zoho.com/apidocs/v1/overview "Zoho WorkDrive API")
