@@ -9,7 +9,8 @@ sections:
   create: all
 - type: jekyll-posts
   label: Posts
-  create: all
+  create: documents
+  new_doc_ext: ".md"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
