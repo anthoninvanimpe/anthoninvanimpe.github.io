@@ -14,13 +14,15 @@ fields:
 - type: list
   name: categories
   label: categories
-- type: file
-  name: image
-  label: image
 - name: description
   type: text
   config:
     required: false
   label: Description
+- name: image
+  type: text
+  config:
+    required: false
+  label: image
 pages:
 - _posts/zoho-workdrive-check-number-of-files.md
