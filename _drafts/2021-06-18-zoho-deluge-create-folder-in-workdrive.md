@@ -21,31 +21,37 @@ Here are some use cases you can wish to use this kind of script:
    _(for example if you are Importer you can store all your documents by shimpent and be able to access them easily from any third application)_
 3. Create a folder by production
 
-    _and so one ..._
+    _and much more..._
 
-**Let's do some coding !**
+You can imagine any file management / administrative system you want and automate it.
 
 ### Our Zoho Deluge Script!
 
+In our example, we want to create folders inside a parent Team Folder. Each folder we create should be create by year of create and be renamed with a specific description and the date of creation.
+
+Okey... **Let's do some coding !**
+
     zoho.workdrive.createFolder(test_folder_name,year_folder_id,"zoho_workdrive");
 
-    headers=Map();
-    headers.put("Accept","application/vnd.api+json");
-    
-    folders = invokeurl
-    [
-    	url :"https://workdrive.zoho.eu/api/v1/files/{Parent File ID}/files"
-    	type :GET
-    	headers:headers
-    	connection:"zoho_workdrive"
-    ];
-    
-    foldersList = folders.get("data");
-
 ```javascript
-year = input.DATE1.getYear();
-supplier_name = zoho.crm.getRecordById("Vendors",input.SUPPLIER_2.toLong()).get("Vendor_Name");
-test_folder_name = input.PRODUCT_CATEGORY + " -Attn. " + input.ATTN_TO + " - " + supplier_name + "(" + input.TEST_STANDARD + ")";
+//Get the year from our date field
+year = input.DATE.getYear();
+
+//folder name
+folderName = "Your Description - "+input.DATE.toString();
+
+headers=Map();
+headers.put("Accept","application/vnd.api+json");
+
+folders = invokeurl
+[
+	url :"https://workdrive.zoho.eu/api/v1/files/{Parent File ID}/files"
+	type :GET
+	headers:headers
+	connection:"zoho_workdrive"
+];
+
+foldersList = folders.get("data");
 ```
 
 ```javascript
