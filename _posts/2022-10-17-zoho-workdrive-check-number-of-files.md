@@ -8,7 +8,7 @@ tags:
 layout: post
 categories:
 - Zoho WorkDrive
-author: ''
+author: Zoho Tricks
 image: "/assets/images/workdrive-icon.png"
 
 ---
