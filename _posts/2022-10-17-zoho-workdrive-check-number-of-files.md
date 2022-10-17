@@ -12,9 +12,8 @@ author: ''
 image: ''
 
 ---
-### Our Zoho Deluge Function!
 
-Below is an example of an function to check the number of files insides a folder.
+Here is an example of an function to check the number of files insides a folder.
 
 ```javascript
 
