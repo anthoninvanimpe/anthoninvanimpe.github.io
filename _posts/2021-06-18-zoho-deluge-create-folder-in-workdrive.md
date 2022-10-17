@@ -1,5 +1,5 @@
 ---
-title: How To Automate Workdrive Folder Creation.
+title: How To Automate Workdrive Folder Creation
 image: assets/images/workdrive-icon.png
 description: Zoho Deluge function to create a folder inside Zoho Workdrive.
 categories:
@@ -7,15 +7,15 @@ categories:
 layout: post
 
 ---
-### What is Zoho Workdrive?
+### What is Zoho WorkDrive?
 
-The Workdrive application is the online file management for teams from Zoho that allows you to store, share your files and much more.
+Zoho WorkDrive application is the online file management for teams from Zoho suite that allows you to store, share your files and much more.
 
 We will learn today a small script to be able to automatically generate a new folder in Workdrive.
 
 Here are some use cases you can wish to use this kind of script:
 
-1. _Create a folder in Zoho Workdrive by Deal from your CRM to store and share all the important files from the deal._
+1. _Create a folder in Zoho WorkDrive by Deal from your CRM to store and share all the important files from the deal._
 2. _Create a folder by delivery_
 
    _(for example if you are Importer you can store all your documents by shipment and be able to access them easily from any third application)_
@@ -100,8 +100,8 @@ input.Url = "<a href='" + newFolderURL + "' target='_blank' title='" + newFolder
 
 #### Additional Resources:
 
-[https://workdrive.zoho.com/apidocs/v1/overview](https://workdrive.zoho.com/apidocs/v1/overview "Zoho WorkDrive API")
+[Zoho WorkDrive API](https://workdrive.zoho.com/apidocs/v1/overview "Zoho WorkDrive API")
 
-[https://www.zoho.com/creator/newhelp/account-setup/understand-connections.html](https://www.zoho.com/creator/newhelp/account-setup/understand-connections.html "Zoho Creator Connections")
+[Zoho Creator Connections](https://www.zoho.com/creator/newhelp/account-setup/understand-connections.html "Zoho Creator Connections")
 
-[https://help.zoho.com/portal/en/kb/creator/developer-guide/forms/add-and-manage-fields/articles/fields-url-understand#Examples](https://help.zoho.com/portal/en/kb/creator/developer-guide/forms/add-and-manage-fields/articles/fields-url-understand#Examples "Zoho Creator URL Field")
+[Zoho Creator URL Field](https://help.zoho.com/portal/en/kb/creator/developer-guide/forms/add-and-manage-fields/articles/fields-url-understand#Examples "Zoho Creator URL Field")
