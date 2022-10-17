@@ -7,8 +7,6 @@ categories:
 layout: post
 
 ---
-### What is Zoho WorkDrive?
-
 Zoho WorkDrive application is the online file management for teams from Zoho suite that allows you to store, share your files and much more.
 
 We will learn today a small script to be able to automatically generate a new folder in Workdrive.
