@@ -1,12 +1,14 @@
 ---
-title: 'Learn how to create a related list in ZohoCRM for the Archisnapper'
-categories: [Zoho, ZohoCRM, Zoho Deluge, Archisnapper]
+title: Create an "Archisnapper" related list in ZohoCRM
+categories:
+- Zoho Deluge
+- Archisnapper
+- Zoho CRM
 layout: post
-image: 'assets/images/crm.svg'
+image: assets/images/crm.svg
+description: ''
+
 ---
-
-
-
 ```javascript
 //Help docs from Zoho
 /*https://help.zoho.com/portal/en/kb/zoho-crm-platform/vertical-applications/developer-guide/build-your-crm/articles/customization-adding-custom-related-lists#Create_Custom_Functions

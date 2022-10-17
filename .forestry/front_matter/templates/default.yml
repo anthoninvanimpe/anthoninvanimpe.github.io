@@ -22,4 +22,5 @@ fields:
     required: false
   label: image
 pages:
+- _posts/2022-01-19-zoho-crm-related-list-archisnapper.md
 - _posts/zoho-workdrive-check-number-of-files.md
