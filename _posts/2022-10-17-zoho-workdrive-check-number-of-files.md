@@ -9,7 +9,7 @@ layout: post
 categories:
 - Zoho WorkDrive
 author: Zoho Tricks
-image: "/assets/images/workdrive-icon.png"
+image: assets/images/workdrive-icon.png
 
 ---
 Here is an example of an function to check the number of files insides a folder.
