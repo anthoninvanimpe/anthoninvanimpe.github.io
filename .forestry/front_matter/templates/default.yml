@@ -17,3 +17,8 @@ fields:
 - type: file
   name: image
   label: image
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
