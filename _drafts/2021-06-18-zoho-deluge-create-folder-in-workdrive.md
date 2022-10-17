@@ -29,6 +29,15 @@ You can imagine any file management / administrative system you want and automat
 
 In our example, we want to create folders inside a parent Team Folder. Each folder we create should be create by year of create and be renamed with a specific description and the date of creation.
 
+What we need to do:
+
+1. **Get the Year of our current record date**
+2. **Define the title of the folder we want to create**
+3. **Check if we have already a folder for that year.**
+   1. _If yes, create our new folder inside that folder_
+   2. _If not, create a folder for that year and create our new folder inside it_
+4. **Use the HTTP response to get the URL of the folder and create a direct link in Zoho Creator Url field type.**
+
 Okey... **Let's do some coding !**
 
     zoho.workdrive.createFolder(test_folder_name,year_folder_id,"zoho_workdrive");
@@ -40,9 +49,11 @@ year = input.DATE.getYear();
 //folder name
 folderName = "Your Description - "+input.DATE.toString();
 
+//Setting Headers for our Deluge HTTP request
 headers=Map();
 headers.put("Accept","application/vnd.api+json");
 
+//HTTP GET request to get the list of the folders already created
 folders = invokeurl
 [
 	url :"https://workdrive.zoho.eu/api/v1/files/{Parent File ID}/files"
