@@ -12,7 +12,6 @@ author: Zoho Tricks
 image: "/assets/images/workdrive-icon.png"
 
 ---
-
 Here is an example of an function to check the number of files insides a folder.
 
 ```javascript
@@ -34,7 +33,8 @@ int Utilities.checkNumberOfFiles(list folderIdsList)
 		connection:"zoho_workdrive"
 	];
     
-	filesNb = folder.get("data").get("attributes").get("storage_info").get("files_count");
+	filesNb = folder.get("data").get("attributes")\
+      			.get("storage_info").get("files_count");
 		
     return filesNb;
   }
