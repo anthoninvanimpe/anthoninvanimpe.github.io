@@ -10,15 +10,8 @@ description: ''
 
 ---
 ```javascript
-//Help docs from Zoho
-/*https://help.zoho.com/portal/en/kb/zoho-crm-platform/vertical-applications/developer-guide/build-your-crm/articles/customization-adding-custom-related-lists#Create_Custom_Functions
-https://www.zoho.com/crm/help/customization/related-lists-dre.html*/
 
-//Help API doc from Archisnapper
-//https://docs.archisnapper.com/docs/getting-started
-
-
-//Function: String archisnapperReports(Int dealId,String authToken)
+String getArchisnapperReports(Int dealId,String authToken)
 
 //Setting the variable for the response in XML format for the related list
 rowCount = 1;
@@ -71,3 +64,11 @@ else
 }
 return responseXML;
 ```
+
+#### Additional Resources:
+
+[Zoho CRM Related Lists](https://help.zoho.com/portal/en/kb/zoho-crm-platform/vertical-applications/developer-guide/build-your-crm/articles/customization-adding-custom-related-lists#Create_Custom_Functions "Zoho CRM Related Lists")
+
+[Zoho CRM Related Lists bis](https://www.zoho.com/crm/help/customization/related-lists-dre.html "Zoho CRM Related Lists")
+
+[Archisnapper API](https://docs.archisnapper.com/docs/getting-started "Archisnapper API")
