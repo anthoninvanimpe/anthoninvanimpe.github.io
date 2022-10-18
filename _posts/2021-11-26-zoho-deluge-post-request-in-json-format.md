@@ -1,17 +1,19 @@
 ---
-title: HTTP POST Request with Zoho Deluge
-description: Learn to make a HTTP POST request correctly with Zoho Deluge.
+title: JSON POST Request with Zoho Deluge
+description: Learn how to make a HTTP POST request correctly with Zoho Deluge.
 tags:
 - Zoho
 - Zoho Deluge
 layout: post
 keywords:
+- JSON
 - API
 - Business automation
 - Zoho Deluge
 - Zoho
 - HTTP
 categories:
+- JSON
 - HTTP Request
 - Zoho Deluge
 image: assets/images/deluge.svg
