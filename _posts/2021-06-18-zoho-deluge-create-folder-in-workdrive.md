@@ -1,5 +1,5 @@
 ---
-title: Automate Zoho WorkDrive Folder Creation
+title: Automate Folder Creation with Zoho WorkDrive
 image: assets/images/workdrive-icon.png
 description: Zoho Deluge function to create a folder inside Zoho Workdrive.
 categories:
@@ -49,6 +49,8 @@ What we need to do:
 
 ### Our Zoho Deluge Script
 
+**Get the list of the folders:**
+
 ```javascript
 //Get the year from our date field
 year = input.DATE.getYear();
@@ -74,7 +76,7 @@ folders = invokeurl
 foldersList = folders.get("data");
 ```
 
-**Check if current Year exists:**
+**Check if current year exists:**
 
 ```javascript
 nbOfFoldersThisYear = 0;
