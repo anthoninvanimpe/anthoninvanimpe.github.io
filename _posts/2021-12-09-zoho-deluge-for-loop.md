@@ -4,7 +4,7 @@ description: Learn how to implement a "for loop" in Zoho Deluge.
 tags:
 - Zoho
 - Zoho Deluge
-layout: article
+layout: post
 categories:
 - Zoho Deluge
 image: assets/images/deluge.svg
