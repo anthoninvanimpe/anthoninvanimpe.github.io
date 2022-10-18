@@ -30,11 +30,11 @@ authors:
   zoho-tricks:
     name: Anthonin
     display_name: Anthonin
-    avatar: 'assets/images/sal.png'
-    email: anthonin@z-intel.com
-    web: https://z-intel.com
+    avatar: ''
+    email: anthonin@zoho-tricks.com
+    web: https://zoho-tricks.com
     twitter: ''
-    description: "Author of Affiliates, a template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+    description: ""
 
 # Social
 social:
