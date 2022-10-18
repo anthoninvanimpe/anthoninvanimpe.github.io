@@ -21,6 +21,13 @@ fields:
   config:
     required: false
   label: image
+- name: keywords
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: keywords
 pages:
 - _posts/2022-01-19-zoho-crm-related-list-archisnapper.md
 - _posts/zoho-workdrive-check-number-of-files.md
