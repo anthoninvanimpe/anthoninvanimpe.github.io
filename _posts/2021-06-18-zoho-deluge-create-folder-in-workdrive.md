@@ -105,7 +105,7 @@ input.Url = "<a href='" + newFolderURL + "' target='_blank' title='" + newFolder
   			+ "'>" + newFolderURLTitle + "</a>";
 ```
 
-#### Additional Resources:
+### Additional Resources:
 
 [Zoho WorkDrive API](https://workdrive.zoho.com/apidocs/v1/overview "Zoho WorkDrive API")
 
