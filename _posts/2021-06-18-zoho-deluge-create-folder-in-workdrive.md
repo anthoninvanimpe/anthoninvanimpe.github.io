@@ -1,5 +1,5 @@
 ---
-title: How To Automate Workdrive Folder Creation
+title: Automate Workdrive Folder Creation
 image: assets/images/workdrive-icon.png
 description: Zoho Deluge function to create a folder inside Zoho Workdrive.
 categories:
