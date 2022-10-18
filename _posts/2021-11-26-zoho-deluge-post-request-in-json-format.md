@@ -21,11 +21,11 @@ image: assets/images/deluge.svg
 ---
 Let's see today how to make a true POST HTTP request with Zoho Deluge!
 
-It can seems really easy to make a post request when you use Javascript (with Fetch or Axios), Python (with Request package) or all other coding languages.
+It can seem really easy to make a post request when you use Javascript (with Fetch or Axios), Python (with Request package) or all other coding languages.
 
 However, when we tried for the first time to make a POST API call with Zoho Deluge in ZohoCreator, we met some difficulties.
 
-So to be sure that you don't forget your headers for your POST HTTP Request with an JSON object, we show you today a small function that can help you to post information to any third application API!
+To be sure that you don't forget your headers for your POST HTTP Request with an JSON object, we show you today a small function that can help you to post information to any third application API!
 
 ### What We Need To Do
 
