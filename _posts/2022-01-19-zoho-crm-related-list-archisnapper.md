@@ -7,9 +7,16 @@ categories:
 layout: post
 image: assets/images/crm.svg
 description: ''
+keywords:
+- Zoho Deluge
+- Archisnapper
+- Zoho CRM
+- Related List
+- Low code
+- Data
 
 ---
-```javascript
+```c++
 
 String getArchisnapperReports(Int dealId,String authToken)
 
