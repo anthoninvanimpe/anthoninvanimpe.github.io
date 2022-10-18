@@ -8,7 +8,7 @@ layout: post
 
 ## Regex used to replace
 
-```javascript
+{% highlight javascript linenos %}
 string Utilities.formatNumber(float decimal)
 {
 	if(decimal != null)
@@ -21,4 +21,4 @@ string Utilities.formatNumber(float decimal)
 		return decimal;
 	}
 }
-```
+{% endhighlight %}
