@@ -11,11 +11,6 @@ topmenu:
   url: "contact/"
   class: "ml-2 btn btn-primary text-white px-3"
 
-#- title: Get this theme
- # url: https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/
-  #class: "ml-2 btn btn-dark text-white px-3"
-  #external: true
-
 # Footer Menu
 footermenu:
 
