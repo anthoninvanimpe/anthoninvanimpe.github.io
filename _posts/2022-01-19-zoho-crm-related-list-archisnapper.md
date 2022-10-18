@@ -16,7 +16,7 @@ keywords:
 - Data
 
 ---
-```c
+```c++
 
 String getArchisnapperReports(Int dealId,String authToken)
 
