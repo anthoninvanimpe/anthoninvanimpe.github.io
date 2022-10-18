@@ -29,6 +29,7 @@ fields:
     max: 
   label: keywords
 pages:
+- _posts/2021-04-11-zoho-deluge-format-number.md
 - _posts/2021-06-18-zoho-deluge-create-folder-in-workdrive.md
 - _posts/2022-01-19-zoho-crm-related-list-archisnapper.md
 - _posts/zoho-workdrive-check-number-of-files.md
