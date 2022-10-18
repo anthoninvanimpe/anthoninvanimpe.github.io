@@ -5,6 +5,14 @@ description: Zoho Deluge function to create a folder inside Zoho Workdrive.
 categories:
 - Zoho Workdrive
 layout: post
+keywords:
+- Zoho
+- Teams
+- Zoho Deluge
+- Folder
+- File management
+- Low code
+- Zoho WorkDrive
 
 ---
 Zoho WorkDrive application is the online file management for teams from Zoho suite that allows you to store, share your files and much more.
@@ -34,7 +42,7 @@ What we need to do:
 * **Get the year of our current record date**
 * **Define the title of the folder we want to create**
 
-```c++
+```javascript
 //Get the year from our date field
 year = input.DATE.getYear();
 
