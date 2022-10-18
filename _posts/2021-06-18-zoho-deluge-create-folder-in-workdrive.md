@@ -34,7 +34,7 @@ What we need to do:
 * **Get the year of our current record date**
 * **Define the title of the folder we want to create**
 
-```javascript
+```c++
 //Get the year from our date field
 year = input.DATE.getYear();
 
