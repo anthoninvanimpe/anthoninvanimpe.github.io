@@ -1,6 +1,6 @@
 ---
-title: Zoho Deluge
-description: Learn to make a http POST request correctly with Zoho Deluge
+title: HTTP POST Request with Zoho Deluge
+description: Learn to make a HTTP POST request correctly with Zoho Deluge.
 tags:
 - Zoho
 - Zoho Deluge
@@ -11,8 +11,10 @@ keywords:
 - Zoho Deluge
 - Zoho
 - HTTP
-categories: []
-image: ''
+categories:
+- HTTP Request
+- Zoho Deluge
+image: assets/images/deluge.svg
 
 ---
 ```javascript
