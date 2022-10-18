@@ -16,7 +16,7 @@ keywords:
 - Data
 
 ---
-```c++
+```deluge
 
 String getArchisnapperReports(Int dealId,String authToken)
 
