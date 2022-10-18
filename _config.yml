@@ -1,11 +1,11 @@
 title: "Zoho Tricks"
-email: anthonin@z-intel.com
+email: info@zoho-tricks.com
 timezone: UTC
 baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/logo.svg'
 favicon: 'assets/images/favicon.ico'
-author: Zoho Tricks
+author: zoho-tricks.com
 paginate: 30
 disqus: ''
 locale: en_us
@@ -28,10 +28,10 @@ ganalytics: G-KKDSHRR79J
 # Authors
 authors:
   zoho-tricks:
-    name: Anthonin
-    display_name: Anthonin
+    name: zoho-tricks
+    display_name: zoho-tricks
     avatar: ''
-    email: anthonin@zoho-tricks.com
+    email: info@zoho-tricks.com
     web: https://zoho-tricks.com
     twitter: ''
     description: ""
