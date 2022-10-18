@@ -1,11 +1,20 @@
 ---
-title: 'Zoho Deluge'
-description: 'Learn to make a http POST request correctly with Zoho Deluge'
-tags: [Zoho, Zoho Deluge]
-layout: article
+title: Zoho Deluge
+description: Learn to make a http POST request correctly with Zoho Deluge
+tags:
+- Zoho
+- Zoho Deluge
+layout: post
+keywords:
+- API
+- Business automation
+- Zoho Deluge
+- Zoho
+- HTTP
+categories: []
+image: ''
+
 ---
-
-
 ```javascript
 //Solution : https://help.zoho.com/portal/en/community/topic/dose-zoho-creator-support-a-true-json-post
 
