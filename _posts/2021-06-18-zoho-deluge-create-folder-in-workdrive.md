@@ -20,7 +20,7 @@ Zoho WorkDrive application is the online file management for teams from Zoho sui
 
 We will learn today a small script to be able to automatically generate a new folder in Workdrive.
 
-Here are some use cases you can wish to use this kind of script:
+### Some Use-Cases
 
 1. _Create a folder in Zoho WorkDrive by Deal from your CRM to store and share all the important files from the deal._
 2. _Create a folder by delivery_
@@ -34,14 +34,20 @@ You can imagine any file management / administrative system you want and automat
 
 **Okay ... Let's do some coding!**
 
-### Our Zoho Deluge Script!
+### What We Need To Do
 
 In our example, we want to create folders inside a parent Team Folder. Each folder we create should be created by year of creation and be renamed with a specific description as well as the date of creation.
 
 What we need to do:
 
-* **Get the year of our current record date**
-* **Define the title of the folder we want to create**
+* _Get the year of our current record date_
+* _Define the title of the folder we want to create_
+* _Check if we have already a folder for that year._
+  1. _If yes, create our new folder inside that folder_
+  2. _If not, create a folder for that year and create our new folder inside it_
+* _Use the HTTP response to get the URL of the folder and create a direct link in Zoho Creator Url field type._
+
+### Our Zoho Deluge Script
 
 ```javascript
 //Get the year from our date field
@@ -68,10 +74,7 @@ folders = invokeurl
 foldersList = folders.get("data");
 ```
 
-* **Check if we have already a folder for that year.**
-
-1. _If yes, create our new folder inside that folder_
-2. _If not, create a folder for that year and create our new folder inside it_
+**Check if current Year exists:**
 
 ```javascript
 nbOfFoldersThisYear = 0;
@@ -96,7 +99,7 @@ else
 }
 ```
 
-* **Use the HTTP response to get the URL of the folder and create a direct link in Zoho Creator Url field type.**
+**Fetch the URL in the field:**
 
 ```javascript
 newFolderURL = newFolder.get("data").get("attributes").get("permalink");
