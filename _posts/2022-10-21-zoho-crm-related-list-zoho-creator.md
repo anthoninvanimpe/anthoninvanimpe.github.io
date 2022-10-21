@@ -30,14 +30,12 @@ In our example, we have an app in Zoho Creator to manage the invoicing to client
 
 ### What We Need To Do
 
-* Make a connection in ZohoCRM with ZohoCreator so that you can have access to the API .
-
-            _Go to Setup > Developer Space > Connections (_[_More details_](https://www.zoho.com/deluge/help/deluge-connections.html#defaultConnection "Zoho Connections")_)_
+* Make a connection in ZohoCRM with ZohoCreator so that you can have access to the API.
+   Go to Setup > Developer Space > Connections ([_More details_](https://www.zoho.com/deluge/help/deluge-connections.html#defaultConnection "Zoho Connections"))
 
 
 * Create a function in Zoho CRM to be used as a related list
-
-            _Go to Setup > Developer Space > Function_
+   Go to Setup > Developer Space > Function
 * Get the records of unpaid invoices from an Zoho Creator app
 * Create a related list in the Contact view of Zoho CRM by formatting information in XML format
 
