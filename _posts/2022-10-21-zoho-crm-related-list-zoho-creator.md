@@ -74,28 +74,28 @@ responseXML = responseXML + "<record>";
 
 for each  deal in deals
 {
-	dealID = deal.get("id");
-	for each  el in recordsJson
+  dealID = deal.get("id");
+  for each  el in recordsJson
 	{
-        //Getting the id from the integration field in ZohoCreator
-		invoiceDealID = el.get("Deal_Name");
+      //Getting the id from the integration field in ZohoCreator
+	  invoiceDealID = el.get("Deal_Name");
     
-        //Matching information from ZohoCreator 
-      	// and render each element in a XML format 
-		if(invoiceDealID.containsValue(dealID))
-		{
-			invoiceAmount = el.executeXPath("root/Total_Without_VAT/text()");
-			invoiceStatus = el.executeXPath("root/Status/text()");
-			invoiceType = el.executeXPath("root/Invoice_Type/text()");
-			invoiceDate = el.executeXPath("root/Date_field/text()");
-			invoiceDeal = el.executeXPath("root/Deal_Name/ display_value/text()");
+       //Matching information from ZohoCreator 
+       // and render each element in a XML format 
+	   if(invoiceDealID.containsValue(dealID))
+	   {
+		 invoiceAmount = el.executeXPath("root/Total_Without_VAT/text()");
+		 invoiceStatus = el.executeXPath("root/Status/text()");
+		 invoiceType = el.executeXPath("root/Invoice_Type/text()");
+		 invoiceDate = el.executeXPath("root/Date_field/text()");
+		 invoiceDeal = el.executeXPath("root/Deal_Name/ display_value/text()");
           
-			responseXML = responseXML + "<row no='" + rowCount + "'><FL val='Amount without VAT'>"; 
-            responseXML += invoiceAmount + "</FL><FL val='Status'>" + invoiceStatus;
-            responseXML += "</FL><FL val='Type'>" + invoiceType + "</FL><FL val='Date'>" ;
-            responseXML += invoiceDate + "</FL><FL val='Deal'>" + invoiceDeal + "</FL></row>";
+		 responseXML = responseXML + "<row no='" + rowCount + "'><FL val='Amount without VAT'>"; 
+         responseXML += invoiceAmount + "</FL><FL val='Status'>" + invoiceStatus;
+         responseXML += "</FL><FL val='Type'>" + invoiceType + "</FL><FL val='Date'>" ;
+         responseXML += invoiceDate + "</FL><FL val='Deal'>" + invoiceDeal + "</FL></row>";
           
-			rowCount = rowCount + 1;
+	     rowCount = rowCount + 1;
 		}
 	}
 }
