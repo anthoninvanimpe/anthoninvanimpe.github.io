@@ -19,7 +19,7 @@ Let's learn how to format numbers as a string so that we can diplay the value in
 
 Working in Zoho Creator, we can often see that the displayed value of a field in a Page is not always what we expect. In such cases we need to use the power of Zoho Deluge Script to modify the rendering of such value.
 
-We will show you below a small function to format a decimal value according to European Currency convention. Using Javascript, we would use [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat 'Javascript NumberFormat object') object, but Zoho Deluge do not provide such capability ... yet.
+We will show you below a small function to format a decimal value according to European Currency convention. Using Javascript, we would use [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat "Javascript NumberFormat object") object, but Zoho Deluge do not provide such capability ... yet.
 
 ### What We Need To Do
 
@@ -32,7 +32,7 @@ We will show you below a small function to format a decimal value according to E
 ### Our Zoho Deluge Script
 
 ```javascript
-string Utilities.formatNumber(float decimal) 
+String formatNumber(float decimal) 
 { 
   if(decimal != null) { 
     
