@@ -17,7 +17,7 @@ keywords:
 categories:
 - Zoho Creator
 - Zoho CRM
-image: ''
+image: assets/images/crm.svg
 
 ---
 Usually, we have a lot of information and data in third apps. It often difficult to keep tracks on those because we need to go from an app to another.
