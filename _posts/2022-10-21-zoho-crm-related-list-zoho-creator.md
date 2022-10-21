@@ -31,11 +31,13 @@ In our example, we have an app in Zoho Creator to manage the invoicing to client
 ### What We Need To Do
 
 * Make a connection in ZohoCRM with ZohoCreator so that you can have access to the API.
+   
    Go to Setup > Developer Space > Connections ([_More details_](https://www.zoho.com/deluge/help/deluge-connections.html#defaultConnection "Zoho Connections"))
 
-
 * Create a function in Zoho CRM to be used as a related list
+
    Go to Setup > Developer Space > Function
+   
 * Get the records of unpaid invoices from an Zoho Creator app
 * Create a related list in the Contact view of Zoho CRM by formatting information in XML format
 
@@ -55,12 +57,14 @@ responseXML = "";
 Param = Map();
 Param.put("criteria","Status == \"Unpaid\"");
 
+apiUrl = "https://creator.zoho.eu/api/v2/{App_Owner_Name}/{App_Name}/report/{Report_Name}";
+
 recordsList = invokeurl
 [
-	url :"https://creator.zoho.eu/api/v2/{App_Owner_Name}/{App_Name}/report/{Report_Name}"
-	type :GET
-	parameters:Param
-	connection:"zoho_creator_reports" // Name of the connection you have set
+  url :apiUrl
+  type :GET
+  parameters:Param
+  connection:"zoho_creator_reports" // Name of the connection you have set
 ];
 
 //Get the data from the response in JSON
@@ -76,28 +80,30 @@ for each  deal in deals
 {
   dealID = deal.get("id");
   for each  el in recordsJson
-	{
-      //Getting the id from the integration field in ZohoCreator
-	  invoiceDealID = el.get("Deal_Name");
+  {
+    //Getting the id from the integration field in ZohoCreator
+    invoiceDealID = el.get("Deal_Name");
     
-       //Matching information from ZohoCreator 
-       // and render each element in a XML format 
-	   if(invoiceDealID.containsValue(dealID))
-	   {
-		 invoiceAmount = el.executeXPath("root/Total_Without_VAT/text()");
-		 invoiceStatus = el.executeXPath("root/Status/text()");
-		 invoiceType = el.executeXPath("root/Invoice_Type/text()");
-		 invoiceDate = el.executeXPath("root/Date_field/text()");
-		 invoiceDeal = el.executeXPath("root/Deal_Name/ display_value/text()");
+    //Matching information from ZohoCreator 
+    // and render each element in a XML format 
+    if(invoiceDealID.containsValue(dealID)){
+    
+       invoiceAmount = el.executeXPath("root/Total_Without_VAT/text()");
+       invoiceStatus = el.executeXPath("root/Status/text()");
+       invoiceType = el.executeXPath("root/Invoice_Type/text()");
+       invoiceDate = el.executeXPath("root/Date_field/text()");
+       invoiceDeal = el.executeXPath("root/Deal_Name/ display_value/text()");
           
-		 responseXML = responseXML + "<row no='" + rowCount + "'><FL val='Amount without VAT'>"; 
-         responseXML += invoiceAmount + "</FL><FL val='Status'>" + invoiceStatus;
-         responseXML += "</FL><FL val='Type'>" + invoiceType + "</FL><FL val='Date'>" ;
-         responseXML += invoiceDate + "</FL><FL val='Deal'>" + invoiceDeal + "</FL></row>";
+       responseXML = responseXML + "<row no='" + rowCount + "'><FL val='Amount without VAT'>"; 
+       responseXML += invoiceAmount + "</FL><FL val='Status'>" + invoiceStatus;
+       responseXML += "</FL><FL val='Type'>" + invoiceType + "</FL><FL val='Date'>" ;
+       responseXML += invoiceDate + "</FL><FL val='Deal'>" + invoiceDeal + "</FL></row>";
           
-	     rowCount = rowCount + 1;
-		}
-	}
+       rowCount = rowCount + 1;
+     }else{
+     	responseXML = responseXML + "<error><message>No unpaid invoices</message></error>";
+     }
+  }
 }
 responseXML = responseXML + "</record>";
 ```
