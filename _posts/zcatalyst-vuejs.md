@@ -55,3 +55,5 @@ keywords:
  once created you should have your VueJS app ready.
  
  now we will need to modify the ```client-package.json``` generated from the catalyst cli.
+ 
+ add base:'./' to vite config file
