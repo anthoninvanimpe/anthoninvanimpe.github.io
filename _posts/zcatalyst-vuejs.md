@@ -57,3 +57,21 @@ keywords:
  now we will need to modify the ```client-package.json``` generated from the catalyst cli.
  
  add base:'./' to vite config file
+ 
+ add in main ts
+ 
+ declare global {
+  interface Window {
+    catalyst: any;
+  }
+}
+
+index.html
+<script src="https://static.zohocdn.com/catalyst/sdk/js/3.0.0/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+
+now you can access catalyst in all component from window object
+
+const catalyst = window.catalyst;
+
+catalyst.auth.signIn("login");
